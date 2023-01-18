@@ -26,7 +26,7 @@ net.Receive("MirrorENT:Make", function(len, ply)
     MirrorENT:SetAngles(ent:GetAngles())
     MirrorENT:SetPos(ent:GetPos())
     MirrorENT:SetMaterial(mat)
-    ent_tomirror:SetColor(color_door)
+    MirrorENT:SetColor(color_door)
     ply.Mirror = true
     ent:Remove()
 end)
