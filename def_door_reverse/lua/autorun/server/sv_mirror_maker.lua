@@ -3,6 +3,7 @@ local blockedmodels = {
 }
 
 local mat = ""
+local color_door = Color(0 , 0 ,0 , 0)
 
 MirrorENT = MirrorENT or {}
 
@@ -25,7 +26,7 @@ net.Receive("MirrorENT:Make", function(len, ply)
     MirrorENT:SetAngles(ent:GetAngles())
     MirrorENT:SetPos(ent:GetPos())
     MirrorENT:SetMaterial(mat)
-    ent_tomirror:SetColor(Color(0 , 0 ,0 ,0))
+    ent_tomirror:SetColor(color_door)
     ply.Mirror = true
     ent:Remove()
 end)
